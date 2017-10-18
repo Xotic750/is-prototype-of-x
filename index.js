@@ -1,6 +1,6 @@
 /**
  * @file Checks if an object exists in another object's prototype chain.
- * @version 1.0.1
+ * @version 1.1.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -11,7 +11,7 @@
 
 var isPrimitive = require('is-primitive');
 var toObject = require('to-object-x');
-var isProtoOf = Object.prototype.isPrototypeOf;
+var isProtoOf = require('cached-constructors-x').Object.prototype.isPrototypeOf;
 
 /**
  * This method checks if an object exists in another object's prototype chain.
