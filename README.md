@@ -41,8 +41,8 @@ This method checks if an object exists in another object's prototype chain.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| proto | <code>object</code> | The proto object to search for. |
-| object | <code>object</code> | The object whose prototype chain will be searched. |
+| proto | <code>Object</code> | The proto object to search for. |
+| object | <code>Object</code> | The object whose prototype chain will be searched. |
 
 **Example**  
 ```js
