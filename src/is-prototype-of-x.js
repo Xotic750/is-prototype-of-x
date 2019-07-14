@@ -7,19 +7,17 @@
  * @module is-prototype-of-x
  */
 
-'use strict';
-
-var isPrimitive = require('is-primitive');
-var toObject = require('to-object-x');
-var isProtoOf = require('cached-constructors-x').Object.prototype.isPrototypeOf;
+const isPrimitive = require('is-primitive');
+const toObject = require('to-object-x');
+const isProtoOf = require('cached-constructors-x').Object.prototype.isPrototypeOf;
 
 /**
  * This method checks if an object exists in another object's prototype chain.
  *
- * @param {Object} proto -The proto object to search for.
+ * @param {object} proto -The proto object to search for.
  * @throws {TypeError} If proto is undefined or null.
- * @param {Object} object -The object whose prototype chain will be searched.
- * @return {boolean} Does the proto object lay in the prototype chain of object.
+ * @param {object} object -The object whose prototype chain will be searched.
+ * @returns {boolean} Does the proto object lay in the prototype chain of object.
  * @example
  * var isPrototypeOf = require('is-prototype-of-x');
  *
