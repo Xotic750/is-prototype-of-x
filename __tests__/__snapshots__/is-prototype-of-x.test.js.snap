@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`isPrototypeOf should throw when proto is null or undefined or null and object is an object 1`] = `"Cannot call method on undefined"`;
+
+exports[`isPrototypeOf should throw when proto is null or undefined or null and object is an object 2`] = `"Cannot call method on null"`;

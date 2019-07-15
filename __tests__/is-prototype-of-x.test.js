@@ -1,36 +1,16 @@
-let isPrototypeOf;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  isPrototypeOf = require('../../index.js');
-} else {
-  isPrototypeOf = returnExports;
-}
+import isPrototypeOf from '../src/is-prototype-of-x';
 
 describe('isPrototypeOf', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof isPrototypeOf).toBe('function');
   });
 
   it('should return false when object is a primitive', function() {
+    expect.assertions(1);
     const falsey = new Array(7);
     falsey[1] = null;
+    /* eslint-disable-next-line no-void */
     falsey[2] = void 0;
     falsey[3] = false;
     falsey[4] = 0;
@@ -49,20 +29,26 @@ describe('isPrototypeOf', function() {
   });
 
   it('should throw when proto is null or undefined or null and object is an object', function() {
+    expect.assertions(2);
     expect(function() {
+      /* eslint-disable-next-line no-void */
       isPrototypeOf(void 0, {});
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       isPrototypeOf(null, {});
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should return true for descendants', function() {
+    expect.assertions(4);
+    /* eslint-disable-next-line lodash/prefer-noop */
     const Foo = function() {};
 
+    /* eslint-disable-next-line lodash/prefer-noop */
     const Bar = function() {};
 
+    /* eslint-disable-next-line lodash/prefer-noop */
     const Baz = function() {};
 
     Bar.prototype = Object.create(Foo.prototype);

@@ -21,15 +21,13 @@
 <a name="module_is-prototype-of-x"></a>
 
 ## is-prototype-of-x
+
 Checks if an object exists in another object's prototype chain.
 
-**Version**: 1.1.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_is-prototype-of-x--module.exports"></a>
 
 ### `module.exports(proto, object)` ⇒ <code>boolean</code> ⏏
+
 This method checks if an object exists in another object's prototype chain.
 
 **Kind**: Exported function  
@@ -38,15 +36,15 @@ This method checks if an object exists in another object's prototype chain.
 
 - <code>TypeError</code> If proto is undefined or null.
 
-
-| Param | Type | Description |
-| --- | --- | --- |
-| proto | <code>Object</code> | The proto object to search for. |
+| Param  | Type                | Description                                        |
+| ------ | ------------------- | -------------------------------------------------- |
+| proto  | <code>Object</code> | The proto object to search for.                    |
 | object | <code>Object</code> | The object whose prototype chain will be searched. |
 
-**Example**  
+**Example**
+
 ```js
-var isPrototypeOf = require('is-prototype-of-x');
+import isPrototypeOf from 'is-prototype-of-x';
 
 function Foo() {}
 function Bar() {}
@@ -55,10 +53,10 @@ function Baz() {}
 Bar.prototype = Object.create(Foo.prototype);
 Baz.prototype = Object.create(Bar.prototype);
 
-var baz = new Baz();
+const baz = new Baz();
 
-isPrototypeOf(Baz.prototype, baz)); // true
-isPrototypeOf(Bar.prototype, baz)); // true
-isPrototypeOf(Foo.prototype, baz)); // true
-isPrototypeOf(Object.prototype, baz)); // true
+console.log(isPrototypeOf(Baz.prototype, baz)); // true
+console.log(isPrototypeOf(Bar.prototype, baz)); // true
+console.log(isPrototypeOf(Foo.prototype, baz)); // true
+console.log(isPrototypeOf(Object.prototype, baz)); // true
 ```

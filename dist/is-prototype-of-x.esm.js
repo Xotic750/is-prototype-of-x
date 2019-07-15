@@ -1,8 +1,6 @@
 import isPrimitive from 'is-primitive';
 import toObject from 'to-object-x';
-
-const isProtoOf = {}.constructor.isPrototypeOf;
-
+var isProtoOf = {}.constructor.isPrototypeOf;
 /**
  * This method checks if an object exists in another object's prototype chain.
  *
@@ -11,6 +9,9 @@ const isProtoOf = {}.constructor.isPrototypeOf;
  * @param {object} object -The object whose prototype chain will be searched.
  * @returns {boolean} Does the proto object lay in the prototype chain of object.
  */
+
 export default function isPrototypeOf(proto, object) {
   return isPrimitive(object) ? false : isProtoOf.call(toObject(proto), object);
 }
+
+//# sourceMappingURL=is-prototype-of-x.esm.js.map
