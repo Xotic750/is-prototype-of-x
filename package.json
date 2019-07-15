@@ -48,9 +48,9 @@
     "url": "https://github.com/Xotic750/is-prototype-of-x/issues"
   },
   "dependencies": {
-    "cached-constructors-x": "^2.0.3",
+    "cached-constructors-x": "^2.0.4",
     "is-primitive": "^3.0.1",
-    "to-object-x": "^2.0.0"
+    "to-object-x": "^2.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
