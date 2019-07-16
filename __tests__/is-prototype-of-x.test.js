@@ -10,7 +10,7 @@ describe('isPrototypeOf', function() {
     expect.assertions(1);
     const falsey = new Array(7);
     falsey[1] = null;
-    /* eslint-disable-next-line no-void */
+
     falsey[2] = void 0;
     falsey[3] = false;
     falsey[4] = 0;
@@ -31,7 +31,6 @@ describe('isPrototypeOf', function() {
   it('should throw when proto is null or undefined or null and object is an object', function() {
     expect.assertions(2);
     expect(function() {
-      /* eslint-disable-next-line no-void */
       isPrototypeOf(void 0, {});
     }).toThrowErrorMatchingSnapshot();
 
@@ -42,13 +41,11 @@ describe('isPrototypeOf', function() {
 
   it('should return true for descendants', function() {
     expect.assertions(4);
-    /* eslint-disable-next-line lodash/prefer-noop */
+
     const Foo = function() {};
 
-    /* eslint-disable-next-line lodash/prefer-noop */
     const Bar = function() {};
 
-    /* eslint-disable-next-line lodash/prefer-noop */
     const Baz = function() {};
 
     Bar.prototype = Object.create(Foo.prototype);
