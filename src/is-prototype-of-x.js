@@ -11,6 +11,8 @@ const isProtoOf = {}.constructor.isPrototypeOf;
  * @param {object} object -The object whose prototype chain will be searched.
  * @returns {boolean} Does the proto object lay in the prototype chain of object.
  */
-export default function isPrototypeOf(proto, object) {
+const isPrototypeOf = function isPrototypeOf(proto, object) {
   return isPrimitive(object) ? false : isProtoOf.call(toObject(proto), object);
-}
+};
+
+export default isPrototypeOf;

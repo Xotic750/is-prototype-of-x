@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-16T22:00:39.589Z",
+  "date": "2019-07-17T19:29:45.317Z",
   "describe": "",
   "description": "Checks if an object exists in another object's prototype chain.",
   "file": "is-prototype-of-x.js",
-  "hash": "8a337558322c92462ca7",
+  "hash": "0938159c35d70665989c",
   "license": "MIT",
-  "version": "2.0.3"
+  "version": "2.0.4"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -163,10 +163,12 @@ var is_primitive_default = /*#__PURE__*/__webpack_require__.n(is_primitive);
  * @param {*} [value] - The value to check.
  * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
  */
-function isNil(value) {
+var isNil = function isNil(value) {
   /* eslint-disable-next-line lodash/prefer-is-nil */
   return value === null || typeof value === 'undefined';
-}
+};
+
+/* harmony default export */ var is_nil_x_esm = (isNil);
 
 
 // CONCATENATED MODULE: ./node_modules/require-object-coercible-x/dist/require-object-coercible-x.esm.js
@@ -180,13 +182,15 @@ function isNil(value) {
  * @returns {string} The `value`.
  */
 
-function requireObjectCoercible(value) {
-  if (isNil(value)) {
+var require_object_coercible_x_esm_requireObjectCoercible = function requireObjectCoercible(value) {
+  if (is_nil_x_esm(value)) {
     throw new TypeError("Cannot call method on ".concat(value));
   }
 
   return value;
-}
+};
+
+/* harmony default export */ var require_object_coercible_x_esm = (require_object_coercible_x_esm_requireObjectCoercible);
 
 
 // CONCATENATED MODULE: ./node_modules/to-object-x/dist/to-object-x.esm.js
@@ -201,13 +205,14 @@ var castObject = {}.constructor;
  * @returns {!object} The `value` converted to an object.
  */
 
-function toObject(value) {
-  return castObject(requireObjectCoercible(value));
-}
+var to_object_x_esm_toObject = function toObject(value) {
+  return castObject(require_object_coercible_x_esm(value));
+};
+
+/* harmony default export */ var to_object_x_esm = (to_object_x_esm_toObject);
 
 
 // CONCATENATED MODULE: ./dist/is-prototype-of-x.esm.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return is_prototype_of_x_esm_isPrototypeOf; });
 
 
 var isProtoOf = {}.constructor.isPrototypeOf;
@@ -220,9 +225,11 @@ var isProtoOf = {}.constructor.isPrototypeOf;
  * @returns {boolean} Does the proto object lay in the prototype chain of object.
  */
 
-function is_prototype_of_x_esm_isPrototypeOf(proto, object) {
-  return is_primitive_default()(object) ? false : isProtoOf.call(toObject(proto), object);
-}
+var is_prototype_of_x_esm_isPrototypeOf = function isPrototypeOf(proto, object) {
+  return is_primitive_default()(object) ? false : isProtoOf.call(to_object_x_esm(proto), object);
+};
+
+/* harmony default export */ var is_prototype_of_x_esm = __webpack_exports__["default"] = (is_prototype_of_x_esm_isPrototypeOf);
 
 
 

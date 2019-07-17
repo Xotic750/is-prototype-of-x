@@ -10,8 +10,10 @@ var isProtoOf = {}.constructor.isPrototypeOf;
  * @returns {boolean} Does the proto object lay in the prototype chain of object.
  */
 
-export default function isPrototypeOf(proto, object) {
+var isPrototypeOf = function isPrototypeOf(proto, object) {
   return isPrimitive(object) ? false : isProtoOf.call(toObject(proto), object);
-}
+};
+
+export default isPrototypeOf;
 
 //# sourceMappingURL=is-prototype-of-x.esm.js.map
