@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-27T09:01:11.752Z",
+  "date": "2019-07-27T14:55:25.265Z",
   "describe": "",
   "description": "Checks if an object exists in another object's prototype chain.",
   "file": "is-prototype-of-x.js",
   "hash": "0938159c35d70665989c",
   "license": "MIT",
-  "version": "2.0.14"
+  "version": "2.0.15"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
