@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-31T16:22:57.848Z",
+  "date": "2019-07-31T17:52:19.866Z",
   "describe": "",
   "description": "Checks if an object exists in another object's prototype chain.",
   "file": "is-prototype-of-x.js",
