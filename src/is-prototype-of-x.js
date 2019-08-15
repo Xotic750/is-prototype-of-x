@@ -1,4 +1,4 @@
-import isPrimitive from 'is-primitive';
+import isPrimitive from 'is-primitive-x';
 import toObject from 'to-object-x';
 
 const isProtoOf = {}.constructor.isPrototypeOf;
